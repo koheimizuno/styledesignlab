@@ -796,6 +796,10 @@ header nav {
   padding-bottom: 64px;
   width: 100%;
   box-sizing: border-box;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; */
 }
 
 @media (max-width: 768px) {
