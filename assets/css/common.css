@@ -443,6 +443,7 @@ input:focus {
   align-items: center;
   gap: 64px;
   flex-wrap: nowrap;
+  transition: all 0.5s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -544,10 +545,6 @@ input:focus {
     max-height: 329px;
     padding: 48px 0;
   }
-}
-
-.category .tag.active {
-  background-color: unset;
 }
 
 @media (max-width: 768px) {
@@ -676,6 +673,17 @@ input:focus {
   color: var(--gray-color);
   padding: 0 24px;
   border: 1px solid var(--gray-color);
+}
+
+.tag.active {
+  background-color: var(--gray-color);
+  color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+  .tag.active {
+    background-color: unset;
+  }
 }
 
 .section-title > p {

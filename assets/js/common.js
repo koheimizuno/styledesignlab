@@ -15,6 +15,7 @@ document
 document
   .getElementsByClassName("category-header")[0]
   ?.addEventListener("click", () => {
-    document.querySelector(".category-btn").classList.toggle("change");
+    document.querySelector(".category").classList.toggle("active");
     document.querySelector(".category ul").classList.toggle("change");
+    document.querySelector(".category-btn").classList.toggle("change");
   });
