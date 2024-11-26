@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+$(document).ready(function () {
   new Swiper(".hero-swiper", {
     direction: "horizontal",
     loop: true,
@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       crossFade: true,
     },
   });
+
   new Swiper(".contents-swiper", {
     loop: true,
     autoplay: {
