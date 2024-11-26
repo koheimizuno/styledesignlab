@@ -1,3 +1,16 @@
+const header = document.getElementsByTagName("header")[0];
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > 100) {
+    header.classList.add("is-sticky");
+  } else {
+    if (header.classList?.contains("is-sticky")) {
+      header.classList?.remove("is-sticky");
+    }
+  }
+});
+
 document
   .getElementsByClassName("hamburger-btn")[0]
   .addEventListener("click", () => {

@@ -787,7 +787,6 @@ div:has(.section-title-dark) {
 
 header nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 5%;
@@ -796,10 +795,6 @@ header nav {
   padding-bottom: 64px;
   width: 100%;
   box-sizing: border-box;
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100; */
 }
 
 @media (max-width: 768px) {
@@ -857,12 +852,12 @@ header nav .menu-list > li {
   cursor: pointer;
 }
 
-header nav .menu-list > li > img {
+header nav .menu-list > li img {
   width: 40px;
 }
 
 @media (max-width: 768px) {
-  header nav .menu-list > li > img {
+  header nav .menu-list > li img {
     width: 20px;
   }
 }
@@ -1122,6 +1117,49 @@ header.work-detail-header {
   left: 0;
   width: 100%;
   z-index: 100;
+}
+
+header.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  backdrop-filter: blur(10px);
+  animation: slideDown 10s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(fit-content);
+  }
+}
+
+header.is-sticky nav {
+  padding-top: 24px;
+  padding-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+  header.is-sticky nav .logo {
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  header.is-sticky nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+header.is-sticky nav .logo-txt {
+  height: 40px;
 }
 
 footer {
