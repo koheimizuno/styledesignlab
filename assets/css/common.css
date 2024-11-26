@@ -15,7 +15,7 @@ html {
 
 @font-face {
   font-family: "Koburina Gothic Std";
-  src: url("../assets/font/KoburinaGothicStd-Regular.otf") format("truetype");
+  src: url("/assets/font/こぶりなゴシックStdW3.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -1261,8 +1261,8 @@ footer > div.copyright {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
   flex-wrap: nowrap;
+  gap: 16px;
 }
 
 @media (max-width: 768px) {
@@ -1342,7 +1342,7 @@ footer > div.copyright {
 }
 
 .topic-card .tag {
-  color: var(--gray-color);
+  color: var(--white-color);
   border-color: var(--gray-color);
 }
 
