@@ -6,8 +6,8 @@
     <link rel="icon" href="favicon.ico" type="image/png" />
     <title>イトウ建築工房</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.css"
       rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="/assets/css/common.css" />
     <link rel="stylesheet" href="/assets/css/top.css" />
@@ -124,28 +124,18 @@
     </header>
     <main>
       <section class="hero-section">
-        <div class="swiper-container hero-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                alt="top-hero-img01"
-                class="size-full object-cover"
-                src="/assets/imgs/top/top-hero-img01.png"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                alt="top-hero-img02"
-                class="size-full object-cover"
-                src="/assets/imgs/top/top-hero-img02.png"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                alt="top-hero-img03"
-                class="size-full object-cover"
-                src="/assets/imgs/top/top-hero-img03.png"
-              />
+        <div class="swiper swiper-scale-effect">
+          <div class="swiper-container hero-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-01 swiper-slide-cover"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-02 swiper-slide-cover"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-03 swiper-slide-cover"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -835,7 +825,7 @@
       </ul>
       <div class="copyright">&copy;Style Design Lab.</div>
     </footer>
-    <script src="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.js"></script>
     <script src="/assets/js/common.js"></script>
     <script src="/assets/js/swiper.js"></script>
   </body>
