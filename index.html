@@ -141,29 +141,27 @@
         </div>
         <h1 class="hidden">Style Design Lab</h1>
         <img
-          class="top-hero-txt pc-only"
-          src="/assets/imgs/top/top-hero-txt.png"
-          alt="top-hero-txt"
-        />
-        <img
-          class="top-hero-sptxt sp-only"
+          class="main-visual-txt"
+          srcset="
+            /assets/imgs/top/top-hero-txt.png   1024w,
+            /assets/imgs/top/top-hero-sptxt.png  768w
+          "
           src="/assets/imgs/top/top-hero-sptxt.png"
-          alt="top-hero-sptxt"
+          alt="top-hero-txt"
         />
       </section>
       <section class="about-sec">
         <img
-          class="pc-only"
-          src="/assets/imgs/top/top-about-img.png"
+          class="fade-up"
+          srcset="
+            /assets/imgs/top/top-about-img.png   1024w,
+            /assets/imgs/top/top-about-spimg.png  768w
+          "
+          src="/assets/imgs/top/top-about-spimg.png"
           alt="top-about-img"
         />
-        <img
-          class="sp-only"
-          src="/assets/imgs/top/top-about-spimg.png"
-          alt="top-about-spimg"
-        />
         <div>
-          <div>
+          <div class="fade-up">
             <h3>Style Design Lab</h3>
             <p>
               <span class="pc-only">－ </span>
@@ -171,7 +169,7 @@
               新たなアイデアを生み出す場所 <span class="pc-only"> －</span>
             </p>
           </div>
-          <p>
+          <p class="fade-up">
             私たちは見えない想いに寄り添い、想い描く暮らしを共に1棟の住宅というカタチで表現します。<br />
             専門的なアドバイスやサポートができるように、大工・建築士・不動産スタッフ・エクステリア技師を揃え、一人ひとりにあった最適なプランのご提案が可能です。
           </p>
@@ -295,18 +293,20 @@
         />
       </section>
       <section class="works-sec">
+        <div class="view-all pc-only">
+          <button class="btn1">
+            <a href="/works">VIEW ALL</a>
+          </button>
+        </div>
         <div class="swiper works-swiper">
           <ul class="swiper-wrapper">
             <li class="swiper-slide">
-              <div class="pc-only">
-                <button class="btn1">
-                  <a href="/works/1">VIEW ALL</a>
-                </button>
-              </div>
-              <img
-                src="/assets/imgs/top/top-works-img01.png"
-                alt="top-works-img01"
-              />
+              <a href="/works/1">
+                <img
+                  src="/assets/imgs/top/top-works-img01.png"
+                  alt="top-works-img01"
+                />
+              </a>
               <div>
                 <p>New Build ブルーグレーの家</p>
                 <ul>
@@ -325,15 +325,12 @@
               </div>
             </li>
             <li class="swiper-slide">
-              <div class="pc-only">
-                <button class="btn1">
-                  <a href="/works/1">VIEW ALL</a>
-                </button>
-              </div>
-              <img
-                src="/assets/imgs/top/top-works-img02.png"
-                alt="top-works-img02"
-              />
+              <a href="/works/1">
+                <img
+                  src="/assets/imgs/top/top-works-img02.png"
+                  alt="top-works-img02"
+                />
+              </a>
               <div>
                 <p>モスグリーンの家</p>
                 <ul>
@@ -352,15 +349,12 @@
               </div>
             </li>
             <li class="swiper-slide">
-              <div class="pc-only">
-                <button class="btn1">
-                  <a href="/works/1">VIEW ALL</a>
-                </button>
-              </div>
-              <img
-                src="/assets/imgs/top/top-works-img01.png"
-                alt="top-works-img01"
-              />
+              <a href="/works/1">
+                <img
+                  src="/assets/imgs/top/top-works-img01.png"
+                  alt="top-works-img01"
+                />
+              </a>
               <div>
                 <p>New Build ブルーグレーの家</p>
                 <ul>
@@ -379,15 +373,12 @@
               </div>
             </li>
             <li class="swiper-slide">
-              <div class="pc-only">
-                <button class="btn1">
-                  <a href="/works/1">VIEW ALL</a>
-                </button>
-              </div>
-              <img
-                src="/assets/imgs/top/top-works-img02.png"
-                alt="top-works-img02"
-              />
+              <a href="/works/1">
+                <img
+                  src="/assets/imgs/top/top-works-img02.png"
+                  alt="top-works-img02"
+                />
+              </a>
               <div>
                 <p>モスグリーンの家</p>
                 <ul>
@@ -406,15 +397,12 @@
               </div>
             </li>
             <li class="swiper-slide">
-              <div class="pc-only">
-                <button class="btn1">
-                  <a href="/works/1">VIEW ALL</a>
-                </button>
-              </div>
-              <img
-                src="/assets/imgs/top/top-works-img01.png"
-                alt="top-works-img01"
-              />
+              <a href="/works/1">
+                <img
+                  src="/assets/imgs/top/top-works-img01.png"
+                  alt="top-works-img01"
+                />
+              </a>
               <div>
                 <p>New Build ブルーグレーの家</p>
                 <ul>
@@ -464,54 +452,78 @@
           </div>
           <ul class="container-sm">
             <li class="topic-card">
-              <img
-                src="/assets/imgs/top/top-topics-img01.png"
-                alt="top-topics-img01"
-              />
+              <a href="/topics/1">
+                <img
+                  src="/assets/imgs/top/top-topics-img01.png"
+                  alt="top-topics-img01"
+                />
+              </a>
               <div>
                 <div>
                   <p>南アルプス市田島　販売開始</p>
                   <button class="tag">土地/売地</button>
                 </div>
-                <a href="/topics/1">
+                <a href="/topics/1" class="btn-next">
                   <img
-                    src="/assets/imgs/icons/next-btn-icon-fill.svg"
+                    class="arrow-right"
+                    src="/assets/imgs/icons/arrow-right.svg"
+                    alt="next-btn-icon-fill"
+                  />
+                  <img
+                    class="arrow-right-white"
+                    src="/assets/imgs/icons/arrow-right-white.svg"
                     alt="next-btn-icon-fill"
                   />
                 </a>
               </div>
             </li>
             <li class="topic-card">
-              <img
-                src="/assets/imgs/top/top-topics-img02.png"
-                alt="top-topics-img02"
-              />
+              <a href="/topics/1/">
+                <img
+                  src="/assets/imgs/top/top-topics-img02.png"
+                  alt="top-topics-img02"
+                />
+              </a>
               <div>
                 <div>
                   <p>夏季休業のお知らせ</p>
                   <button class="tag">お知らせ</button>
                 </div>
-                <a href="/topics/1">
+                <a href="/topics/1" class="btn-next">
                   <img
-                    src="/assets/imgs/icons/next-btn-icon-fill.svg"
+                    class="arrow-right"
+                    src="/assets/imgs/icons/arrow-right.svg"
+                    alt="next-btn-icon-fill"
+                  />
+                  <img
+                    class="arrow-right-white"
+                    src="/assets/imgs/icons/arrow-right-white.svg"
                     alt="next-btn-icon-fill"
                   />
                 </a>
               </div>
             </li>
             <li class="topic-card">
-              <img
-                src="/assets/imgs/top/top-topics-img03.png"
-                alt="top-topics-img03"
-              />
+              <a href="/topics/1/">
+                <img
+                  src="/assets/imgs/top/top-topics-img03.png"
+                  alt="top-topics-img03"
+                />
+              </a>
               <div>
                 <div>
                   <p>南アルプス市田島　販売開始</p>
                   <button class="tag">土地/売地</button>
                 </div>
-                <a href="/topics/1">
+                <a href="/topics/1" class="btn-next">
                   <img
-                    src="/assets/imgs/icons/next-btn-icon-fill.svg"
+                    class="arrow-right"
+                    src="/assets/imgs/icons/arrow-right.svg"
+                    alt="next-btn-icon-fill"
+                  />
+                  <img
+                    class="arrow-right-white"
+                    src="/assets/imgs/icons/arrow-right-white.svg"
                     alt="next-btn-icon-fill"
                   />
                 </a>
@@ -521,60 +533,89 @@
           <div class="swiper topics-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide topic-card">
-                <img
-                  src="/assets/imgs/top/top-topics-img01.png"
-                  alt="top-topics-img01"
-                />
+                <a href="/topics/1/">
+                  <img
+                    src="/assets/imgs/top/top-topics-img01.png"
+                    alt="top-topics-img01"
+                  />
+                </a>
                 <div>
                   <div>
                     <p>南アルプス市田島　販売開始</p>
                     <button class="tag">土地/売地</button>
                   </div>
-                  <button>
+                  <a href="/topics/1" class="btn-next">
                     <img
-                      src="/assets/imgs/icons/next-btn-icon-fill.svg"
+                      class="arrow-right"
+                      src="/assets/imgs/icons/arrow-right.svg"
                       alt="next-btn-icon-fill"
                     />
-                  </button>
+                    <img
+                      class="arrow-right-white"
+                      src="/assets/imgs/icons/arrow-right-white.svg"
+                      alt="next-btn-icon-fill"
+                    />
+                  </a>
                 </div>
               </div>
               <div class="swiper-slide topic-card">
-                <img
-                  src="/assets/imgs/top/top-topics-img02.png"
-                  alt="top-topics-img02"
-                />
+                <a href="/topics/1/">
+                  <img
+                    src="/assets/imgs/top/top-topics-img02.png"
+                    alt="top-topics-img02"
+                  />
+                </a>
                 <div>
                   <div>
                     <p>夏季休業のお知らせ</p>
                     <button class="tag">お知らせ</button>
                   </div>
-                  <button>
+                  <a href="/topics/1" class="btn-next">
                     <img
-                      src="/assets/imgs/icons/next-btn-icon-fill.svg"
+                      class="arrow-right"
+                      src="/assets/imgs/icons/arrow-right.svg"
                       alt="next-btn-icon-fill"
                     />
-                  </button>
+                    <img
+                      class="arrow-right-white"
+                      src="/assets/imgs/icons/arrow-right-white.svg"
+                      alt="next-btn-icon-fill"
+                    />
+                  </a>
                 </div>
               </div>
               <div class="swiper-slide topic-card">
-                <img
-                  src="/assets/imgs/top/top-topics-img03.png"
-                  alt="top-topics-img03"
-                />
+                <a href="/topics/1/">
+                  <img
+                    src="/assets/imgs/top/top-topics-img03.png"
+                    alt="top-topics-img03"
+                  />
+                </a>
                 <div>
                   <div>
                     <p>南アルプス市田島　販売開始</p>
                     <button class="tag">土地/売地</button>
                   </div>
-                  <button>
+                  <a href="/topics/1" class="btn-next">
                     <img
-                      src="/assets/imgs/icons/next-btn-icon-fill.svg"
+                      class="arrow-right"
+                      src="/assets/imgs/icons/arrow-right.svg"
                       alt="next-btn-icon-fill"
                     />
-                  </button>
+                    <img
+                      class="arrow-right-white"
+                      src="/assets/imgs/icons/arrow-right-white.svg"
+                      alt="next-btn-icon-fill"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="view-all">
+            <button class="btn1">
+              <a href="/topics">VIEW ALL</a>
+            </button>
           </div>
         </div>
       </section>
@@ -702,76 +743,70 @@
         </div>
         <ul class="container-sm">
           <li>
-            <span>
-              <a href="/company">
+            <a href="/company">
+              <span>
                 <img
                   src="/assets/imgs/icons/next-btn-icon-fill.svg"
                   alt="next-btn-icon-fill"
                 />
-              </a>
-            </span>
-            <img
-              class="pc-only"
-              src="/assets/imgs/top/top-company-img01.png"
-              alt="top-company-img01"
-            />
-            <img
-              class="sp-only"
-              src="/assets/imgs/top/top-company-spimg01.png"
-              alt="top-company-spimg01"
-            />
-            <div>
-              <p>COMPANY</p>
-              <h5>企業情報</h5>
-            </div>
+              </span>
+              <img
+                srcset="
+                  /assets/imgs/top/top-company-img01.png   1024w,
+                  /assets/imgs/top/top-company-spimg01.png  768w
+                "
+                src="/assets/imgs/top/top-company-spimg01.png"
+                alt="top-company-img01"
+              />
+              <div>
+                <p>COMPANY</p>
+                <h5>企業情報</h5>
+              </div>
+            </a>
           </li>
           <li>
-            <span>
-              <a href="/work-flow">
+            <a href="/work-flow">
+              <span>
                 <img
                   src="/assets/imgs/icons/next-btn-icon-fill.svg"
                   alt="next-btn-icon-fill"
                 />
-              </a>
-            </span>
-            <img
-              class="pc-only"
-              src="/assets/imgs/top/top-company-img02.png"
-              alt="top-company-img02"
-            />
-            <img
-              class="sp-only"
-              src="/assets/imgs/top/top-company-spimg02.png"
-              alt="top-company-spimg02"
-            />
-            <div>
-              <p>WORK FLOW</p>
-              <h5>家づくりの流れ</h5>
-            </div>
+              </span>
+              <img
+                srcset="
+                  /assets/imgs/top/top-company-img02.png   1024w,
+                  /assets/imgs/top/top-company-spimg02.png  768w
+                "
+                src="/assets/imgs/top/top-company-spimg02.png"
+                alt="top-company-img02"
+              />
+              <div>
+                <p>WORK FLOW</p>
+                <h5>家づくりの流れ</h5>
+              </div>
+            </a>
           </li>
           <li>
-            <span>
-              <a href="/recruit">
+            <a href="/recruit">
+              <span>
                 <img
                   src="/assets/imgs/icons/next-btn-icon-fill.svg"
                   alt="next-btn-icon-fill"
                 />
-              </a>
-            </span>
-            <img
-              class="pc-only"
-              src="/assets/imgs/top/top-company-img03.png"
-              alt="top-company-img03"
-            />
-            <img
-              class="sp-only"
-              src="/assets/imgs/top/top-company-spimg03.png"
-              alt="top-company-spimg03"
-            />
-            <div>
-              <p>RECRUIT</p>
-              <h5>採用情報</h5>
-            </div>
+              </span>
+              <img
+                srcset="
+                  /assets/imgs/top/top-company-img03.png   1024w,
+                  /assets/imgs/top/top-company-spimg03.png  768w
+                "
+                src="/assets/imgs/top/top-company-spimg03.png"
+                alt="top-company-img03"
+              />
+              <div>
+                <p>RECRUIT</p>
+                <h5>採用情報</h5>
+              </div>
+            </a>
           </li>
         </ul>
       </section>

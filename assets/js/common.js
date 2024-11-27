@@ -1,4 +1,3 @@
-let lastScrollTop = 0;
 let header = $("header");
 
 $(document).ready(function () {
@@ -16,9 +15,12 @@ $(document).ready(function () {
     $(".category-btn").toggleClass("change");
   });
 
+  // Hero Image Animation
   $(window).on("scroll", function () {
     let scrollTop = $(this).scrollTop();
-    if (scrollTop > lastScrollTop) {
+    let windowHeight = $(window).height();
+
+    if (scrollTop !== 0) {
       if ($(window).width() > 768) {
         gsap.to(header.find("nav"), { padding: "24px 0 18px", duration: 0.5 });
       } else {
@@ -31,7 +33,7 @@ $(document).ready(function () {
           duration: 0.5,
         });
       }
-    } else if (scrollTop < lastScrollTop) {
+    } else {
       if ($(window).width() > 768) {
         gsap.to(header.find("nav"), { padding: "80px 0 64px", duration: 0.5 });
       } else {
@@ -45,25 +47,47 @@ $(document).ready(function () {
         });
       }
     }
-    lastScrollTop = scrollTop;
 
-    let topHeroTxtOffset = $(".top-hero-txt").offset().top;
-    let windowHeight = $(window).height();
+    // Main Visual Animation
+    let topHeroTxtOffset = $(".main-visual-txt").offset().top;
 
     if (scrollTop > topHeroTxtOffset - windowHeight) {
-      gsap.to(".top-hero-txt", {
-        transform: "translateY(-50%)",
-        opacity: "1",
-        duration: 2,
+      gsap.to(".main-visual-txt", {
+        opacity: 1,
+        y: 0,
+        duration: 1,
         ease: "power2.out",
       });
     } else {
-      gsap.to(".top-hero-txt", {
-        transform: "translateY(0)",
-        opacity: "0",
-        duration: 2,
+      gsap.to(".main-visual-txt", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
         ease: "power2.out",
       });
     }
+
+    // Fade Up Animation
+    let fadeUpElements = $(".fade-up");
+
+    fadeUpElements.each(function () {
+      let elementOffset = $(this).offset().top;
+      if (scrollTop + windowHeight > elementOffset) {
+        gsap.to($(this), {
+          opacity: 1,
+          y: 0,
+          duration: 2,
+          ease: "power2.out",
+          stagger: 1,
+        });
+      } else {
+        gsap.to($(this), {
+          opacity: 0,
+          y: 50,
+          duration: 2,
+          ease: "power2.out",
+        });
+      }
+    });
   });
 });

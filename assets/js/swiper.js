@@ -36,9 +36,9 @@ $(document).ready(function () {
 
   new Swiper(".works-swiper", {
     loop: true,
-    autoplay: {
-      delay: 4000,
-    },
+    // autoplay: {
+    //   delay: 4000,
+    // },
     centeredSlides: false,
     spaceBetween: 30,
     slidesPerView: "auto",

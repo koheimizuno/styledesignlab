@@ -62,19 +62,21 @@ section.hero-section {
   transform: scale(1.2);
 }
 
-section.hero-section > img {
+section.hero-section > img.main-visual-txt {
   position: absolute;
   z-index: 1;
-}
-
-section.hero-section > img.top-hero-txt {
+  width: 100%;
+  max-width: 1000px;
   left: 120px;
   bottom: 177px;
 }
 
-section.hero-section > img.top-hero-sptxt {
-  left: 32px;
-  bottom: -135px;
+@media (max-width: 768px) {
+  section.hero-section > img.main-visual-txt {
+    max-width: 154px;
+    left: 32px;
+    bottom: -135px;
+  }
 }
 
 section.about-sec {
@@ -511,6 +513,10 @@ section.works-sec {
   }
 }
 
+section.works-sec div.view-all {
+  margin: 0 0 200px 320px;
+}
+
 section.works-sec .works-swiper {
   position: unset;
   margin-left: 320px;
@@ -533,16 +539,20 @@ section.works-sec .works-swiper .swiper-wrapper .swiper-slide {
   width: unset !important;
 }
 
-section.works-sec
-  .works-swiper
-  .swiper-wrapper
-  .swiper-slide
-  > div:first-of-type {
-  margin-bottom: 200px;
+section.works-sec .works-swiper .swiper-wrapper .swiper-slide > a {
+  display: block;
+  overflow: hidden;
 }
 
 section.works-sec .works-swiper .swiper-wrapper .swiper-slide img {
   max-width: 1280px;
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out;
+}
+
+section.works-sec .works-swiper .swiper-wrapper .swiper-slide img:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -556,7 +566,7 @@ section.works-sec .works-swiper .swiper-wrapper .swiper-slide img {
     .works-swiper
     .swiper-wrapper
     .swiper-slide
-    > div:nth-of-type(2) {
+    > div:first-of-type {
     padding-left: 32px;
   }
 }
@@ -565,7 +575,7 @@ section.works-sec
   .works-swiper
   .swiper-wrapper
   .swiper-slide
-  > div:nth-of-type(2)
+  > div:first-of-type
   > p {
   font-size: 28px;
   line-height: 2em;
@@ -575,12 +585,21 @@ section.works-sec
   padding: 27px 0 16px;
 }
 
+section.works-sec
+  .works-swiper
+  .swiper-wrapper
+  .swiper-slide
+  > div:first-of-type
+  > p:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   section.works-sec
     .works-swiper
     .swiper-wrapper
     .swiper-slide
-    > div:nth-of-type(2)
+    > div:first-of-type
     > p {
     font-size: 20px;
     line-height: 2em;
@@ -595,7 +614,7 @@ section.works-sec
   .works-swiper
   .swiper-wrapper
   .swiper-slide
-  > div:nth-of-type(2)
+  > div:first-of-type
   > ul {
   display: flex;
   flex-direction: row;
@@ -724,6 +743,14 @@ section.works-sec .works-swiper > div.page-navigation .swiper-pagination {
   top: 525px;
 }
 
+section.works-sec
+  .works-swiper
+  > div.page-navigation
+  .swiper-pagination-progressbar
+  .swiper-pagination-progressbar-fill {
+  background: var(--gray-color);
+}
+
 section.works-sec .works-swiper > div.page-navigation .navigation-wrapper {
   position: relative;
   height: 34px;
@@ -787,8 +814,33 @@ section.works-sec
 
 section.topics-sec {
   background-color: var(--dark-color);
-  padding-top: 464px;
+  padding-top: 345px;
   padding-bottom: 724px;
+}
+
+section.topics-sec > div > div.view-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  section.topics-sec > div > div.view-all {
+    margin-top: 80px;
+  }
+}
+
+section.topics-sec > div > div.view-all .btn1::before {
+  background: var(--white-color);
+}
+
+section.topics-sec > div > div.view-all .btn1 a {
+  color: var(--white-color);
+}
+
+section.topics-sec > div > div.view-all .btn1 a::after {
+  background: url("/assets/imgs/icons/arrow-right-white.svg") no-repeat center;
 }
 
 @media (max-width: 768px) {
@@ -809,6 +861,20 @@ section.topics-sec > div > ul {
   section.topics-sec > div > ul {
     display: none;
   }
+}
+
+section.topics-sec > div > ul > li > a {
+  display: block;
+  overflow: hidden;
+}
+
+section.topics-sec > div > ul > li > a > img {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+section.topics-sec > div > ul > li > a > img:hover {
+  transform: scale(1.05);
 }
 
 section.topics-sec > div > div.topics-swiper {
@@ -992,6 +1058,7 @@ section.company-sec > ul > li {
   position: relative;
   width: 426px;
   height: 464px;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -1001,36 +1068,49 @@ section.company-sec > ul > li {
   }
 }
 
-section.company-sec > ul > li > span {
+section.company-sec > ul > li > a > span {
   position: absolute;
   top: 40px;
   right: 40px;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
-  section.company-sec > ul > li > span {
+  section.company-sec > ul > li > a > span {
     top: 20px;
     right: 20px;
   }
-  section.company-sec > ul > li > span > img {
+  section.company-sec > ul > li > a > span > img {
     width: 34px;
   }
 }
 
-section.company-sec > ul > li > div {
+section.company-sec > ul > li > a > img {
+  width: 100%;
+  opacity: 0.9;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+section.company-sec > ul > li > a:hover > img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+section.company-sec > ul > li > a > div {
   position: absolute;
   left: 50px;
   bottom: 45px;
 }
 
 @media (max-width: 768px) {
-  section.company-sec > ul > li > div {
+  section.company-sec > ul > li > a > div {
     left: 20px;
     bottom: 12px;
   }
 }
 
-section.company-sec > ul > li > div > p {
+section.company-sec > ul > li > a > div > p {
   font-size: 14px;
   line-height: 2em;
   font-weight: 250;
@@ -1039,7 +1119,7 @@ section.company-sec > ul > li > div > p {
 }
 
 @media (max-width: 768px) {
-  section.company-sec > ul > li > div > p {
+  section.company-sec > ul > li > a > div > p {
     font-size: 12px;
     line-height: 2em;
     font-weight: 250;
@@ -1048,7 +1128,7 @@ section.company-sec > ul > li > div > p {
   }
 }
 
-section.company-sec > ul > li > div > h5 {
+section.company-sec > ul > li > a > div > h5 {
   font-size: 24px;
   line-height: 2em;
   font-weight: 300;
@@ -1057,7 +1137,7 @@ section.company-sec > ul > li > div > h5 {
 }
 
 @media (max-width: 768px) {
-  section.company-sec > ul > li > div > h5 {
+  section.company-sec > ul > li > a > div > h5 {
     font-size: 18px;
     line-height: 2em;
     font-weight: 300;
