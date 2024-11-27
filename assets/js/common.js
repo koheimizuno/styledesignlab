@@ -22,8 +22,19 @@ $(document).ready(function () {
 
     if (scrollTop !== 0) {
       if ($(window).width() > 768) {
-        gsap.to(header.find("nav"), { padding: "24px 0 18px", duration: 0.5 });
+        gsap.to(header, {
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          duration: 0.5,
+        });
+        gsap.to(header.find("nav"), {
+          padding: "24px 0 18px",
+          duration: 0.5,
+        });
       } else {
+        gsap.to(header, {
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          duration: 0.5,
+        });
         gsap.to(header.find("nav"), {
           padding: "16px 16px 12px",
           duration: 0.5,
@@ -35,8 +46,16 @@ $(document).ready(function () {
       }
     } else {
       if ($(window).width() > 768) {
+        gsap.to(header, {
+          boxShadow: "none",
+          duration: 0.5,
+        });
         gsap.to(header.find("nav"), { padding: "80px 0 64px", duration: 0.5 });
       } else {
+        gsap.to(header, {
+          boxShadow: "none",
+          duration: 0.5,
+        });
         gsap.to(header.find("nav"), {
           padding: "24px 16px 18px",
           duration: 0.5,
@@ -68,9 +87,9 @@ $(document).ready(function () {
     }
 
     // Fade Up Animation
-    let fadeUpElements = $(".fade-up");
+    let scrollFadeUpElements = $(".scroll-fade-up");
 
-    fadeUpElements.each(function () {
+    scrollFadeUpElements.each(function () {
       let elementOffset = $(this).offset().top;
       if (scrollTop + windowHeight > elementOffset) {
         gsap.to($(this), {
@@ -90,4 +109,22 @@ $(document).ready(function () {
       }
     });
   });
+
+  // let fadeUpElements = $(".fade-up");
+
+  // fadeUpElements.each(function () {
+  //   gsap.to($(this), {
+  //     opacity: 0,
+  //     y: 50,
+  //     duration: 2,
+  //     ease: "power2.out",
+  //   });
+  //   gsap.to($(this), {
+  //     opacity: 1,
+  //     y: 0,
+  //     duration: 2,
+  //     ease: "power2.out",
+  //     stagger: 1,
+  //   });
+  // });
 });

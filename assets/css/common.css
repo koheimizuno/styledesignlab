@@ -459,6 +459,10 @@ input:focus {
   color: var(--gray-color);
 }
 
+.main-visual-category > div:not(.page-header) > div > ul a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .main-visual-category > div:not(.page-header) > div > ul a {
     font-size: 16px;
@@ -849,10 +853,17 @@ header nav {
   box-sizing: border-box;
 }
 
+header nav.container-lg {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 @media (max-width: 768px) {
-  header nav {
+  header nav.container-lg {
     padding-top: 24px;
     padding-bottom: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 

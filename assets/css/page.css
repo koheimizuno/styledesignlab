@@ -506,6 +506,7 @@
   column-gap: 0;
   row-gap: 0;
   color: var(--white-color);
+  margin-top: 96px;
   margin-bottom: 240px;
 }
 
@@ -517,6 +518,7 @@
     align-items: center;
     gap: 120px;
     flex-wrap: nowrap;
+    margin-top: 66px;
     margin-bottom: 96px;
   }
 }
