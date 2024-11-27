@@ -1105,14 +1105,12 @@ header section.hamburger-sec > div > p {
 }
 
 header.top-header nav {
-  padding-top: 84px;
-  padding-bottom: 84px;
+  padding: 84px 0;
 }
 
 @media (max-width: 768px) {
   header.top-header nav {
-    padding-top: 24px;
-    padding-bottom: 18px;
+    padding: 24px 16px 18px;
   }
 }
 

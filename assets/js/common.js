@@ -46,5 +46,24 @@ $(document).ready(function () {
       }
     }
     lastScrollTop = scrollTop;
+
+    let topHeroTxtOffset = $(".top-hero-txt").offset().top;
+    let windowHeight = $(window).height();
+
+    if (scrollTop > topHeroTxtOffset - windowHeight) {
+      gsap.to(".top-hero-txt", {
+        transform: "translateY(-50%)",
+        opacity: "1",
+        duration: 2,
+        ease: "power2.out",
+      });
+    } else {
+      gsap.to(".top-hero-txt", {
+        transform: "translateY(0)",
+        opacity: "0",
+        duration: 2,
+        ease: "power2.out",
+      });
+    }
   });
 });
